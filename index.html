@@ -2,33 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Display Query String</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiwam Yadav | Shopify Tech Leader</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        #output { font-size: 24px; color: #2563eb; font-weight: bold; margin-top: 20px; }
+        :root {
+            --primary: #008060; /* Official Shopify Green */
+            --primary-dark: #004c3f;
+            --dark: #1a1a1a;
+            --light: #f4f6f8;
+            --gray: #637381;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -3rem auto 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-box {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature-box h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background: #e3fcef;
+            color: var(--primary-dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <h2>Welcome! Here is the text from your link:</h2>
-    <div id="output">Loading...</div>
+    <header>
+        <h1>Shiwam Yadav</h1>
+        <p class="tagline">Shopify Tech Leader & E-Commerce Architect</p>
+    </header>
 
-    <script>
-        // 1. Get the query parameters from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-
-        // 2. Extract a specific parameter (e.g., ?text=Hello+World)
-        const userText = urlParams.get('text');
-
-        // 3. Display it on the screen
-        const outputDiv = document.getElementById('output');
+    <div class="container">
         
-        if (userText) {
-            outputDiv.textContent = userText;
-        } else {
-            outputDiv.textContent = "No text provided in the link! Try adding ?text=YourMessage to the URL.";
-        }
-    </script>
+        <!-- About Section -->
+        <section class="card">
+            <h2>Executive Profile</h2>
+            <p>
+                As a Shopify Tech Leader within a premier Shopify partner organization, I spearhead the architectural design, engineering, and seamless deployment of state-of-the-art, high-converting Shopify stores for global brands. 
+            </p>
+            <p>
+                My expertise spans full-scale e-commerce lifecycles—from core custom development and performance tuning to strategic app stack evaluations and complex ecosystem integrations.
+            </p>
+        </section>
+
+        <!-- Core Responsibilities -->
+        <section class="card">
+            <h2>Core Leadership & Technical Scope</h2>
+            <div class="grid">
+                <div class="feature-box">
+                    <h3>Technical Development</h3>
+                    <p>Building high-performance storefronts using Liquid, Hydrogen, Storefront APIs, and custom theme modifications tailored to enterprise needs.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Architectural Oversight</h3>
+                    <p>Directing technical roadmaps, ensuring code quality standards, scalability, robust security, and lightning-fast site optimization.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>App Curation & Strategy</h3>
+                    <p>Evaluating, selecting, and integrating the most suitable SaaS applications and micro-services to drive conversion, retention, and automation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack & Ecosystem -->
+        <section class="card">
+            <h2>Ecosystem & Competencies</h2>
+            <p>Proficient across modern e-commerce toolsets, custom APIs, data migration workflows, and automation suites.</p>
+            <div class="badge-container">
+                <span class="badge">Shopify Plus</span>
+                <span class="badge">Liquid / Theme Architecture</span>
+                <span class="badge">Storefront API & GraphQL</span>
+                <span class="badge">App Stack Strategy</span>
+                <span class="badge">Performance Optimization</span>
+                <span class="badge">B2B Solutions</span>
+                <span class="badge">Systems Integration</span>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Shiwam Yadav. All rights reserved.
+    </footer>
 
 </body>
 </html>
